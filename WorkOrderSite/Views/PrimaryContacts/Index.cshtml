@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WorkOrderSite.Models.PrimaryContact>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PrimaryContactFName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrimaryContactLName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrimaryContactPhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrimaryContactEmail)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrimaryContactFName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrimaryContactLName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrimaryContactPhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrimaryContactEmail)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PrimaryContactID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PrimaryContactID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PrimaryContactID })
+        </td>
+    </tr>
+}
+
+</table>

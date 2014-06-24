@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@*<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">Test</p>
+    
+</div>*@
+
+<h2>Current Work Orders</h2>
+<p>Open Work Orders:<br />
+   Open work orders will be listed here as clickable links.
+    
+    
+    
+</p>
+@*@foreach (var jobs in Model)
+    {
+
+        <ul>Job ID: @jobs.JobID</ul>
+        <ul>Description: @Html.ActionLink(jobs.Description, "Details", "Job", new { id = jobs.JobID }, null)</ul>
+
+    }*@

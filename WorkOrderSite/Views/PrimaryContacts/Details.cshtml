@@ -1,0 +1,50 @@
+﻿@model WorkOrderSite.Models.PrimaryContact
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PrimaryContact</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryContactFName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryContactFName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryContactLName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryContactLName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryContactPhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryContactPhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimaryContactEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrimaryContactEmail)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PrimaryContactID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

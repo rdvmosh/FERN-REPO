@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WorkOrderSite.Models.Worker>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkerLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkerFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkerEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkerPhone)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkerLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkerFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkerEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkerPhone)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.WorkerID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.WorkerID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.WorkerID })
+        </td>
+    </tr>
+}
+
+</table>

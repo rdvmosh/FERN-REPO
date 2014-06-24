@@ -1,0 +1,87 @@
+﻿@model IEnumerable<WorkOrderSite.Models.WorkOrder>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LocationID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrimaryContactID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkOrderTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkOrderDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkOrderPriority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkOrderRequestDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkOrderRequiredDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.WorkOrderCompletedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resolution)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LocationID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrimaryContactID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkOrderTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkOrderDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkOrderPriority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkOrderRequestDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkOrderRequiredDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.WorkOrderCompletedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Resolution)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.WorkOrderID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.WorkOrderID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.WorkOrderID })
+        </td>
+    </tr>
+}
+
+</table>
